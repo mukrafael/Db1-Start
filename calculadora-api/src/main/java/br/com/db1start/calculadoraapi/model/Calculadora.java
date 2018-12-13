@@ -39,11 +39,11 @@ public class Calculadora {
 	protected Calculadora() {
 	}
 	
-	public Calculadora(Double numeroUm, Double numeroDois, Operacao operacao) {
-		this.numeroUm = numeroUm;
+	public Calculadora(double numeroUM, double numeroDois, Operacao operacao) {
+		this.numeroUm = numeroUM;
 		this.numeroDois = numeroDois;
 		this.operacoes = operacao;
-		this.resultado = operacao.executaOperacao(numeroUm, numeroDois);
+		this.resultado = operacao.executaOperacao(numeroUM, numeroDois);
 		this.data = LocalDateTime.now();
 	}
 	
@@ -57,11 +57,11 @@ public class Calculadora {
 	}
 	
 	public Double getNumeroUm() {
-		return numeroUm;
+		return this.numeroUm;
 	}
 	
 	public Double getNumeroDois() {
-		return numeroDois;
+		return this.numeroDois;
 	}
 	
 	public Double getResultado() {
@@ -76,7 +76,5 @@ public class Calculadora {
 		return data;
 	}
 	
-	public Double executaOperacao(Operacao operacoes) {
-		return operacoes.executaOperacao(this.numeroUm, this.numeroDois);
-	}
+
 }
